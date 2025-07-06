@@ -11,15 +11,14 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-
     header {
-      background: url('<a href='https://postimg.cc/vcFFsrHs') no-repeat center/cover;
+      background: url('banner.png') no-repeat center/cover;
       color: white;
       padding: 100px 20px;
       text-align: center;
+      height: 400px;
     }
     header h1 { font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
-
     nav {
       background-color: #4CAF50;
       padding: 10px 0;
@@ -35,17 +34,14 @@
     nav a:hover {
       text-decoration: underline;
     }
-
     section {
       padding: 40px 10%;
       max-width: 1200px;
       margin: auto;
     }
-
     .about, .products, .contact {
       margin-bottom: 40px;
     }
-
     .products ul {
       list-style: none;
       padding-left: 0;
@@ -54,28 +50,23 @@
       content: "🐾 ";
       margin-right: 5px;
     }
-
     .map {
       margin-top: 20px;
     }
-
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 10%;
     }
-
     @media (max-width: 600px) {
       header h1 { font-size: 2rem; }
       nav { flex-direction: column; gap: 10px; }
       section { padding: 20px 5%; }
     }
-
     .fade-in {
       animation: fadeIn 1s ease-in;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -83,23 +74,19 @@
   </style>
 </head>
 <body>
-
   <header class="fade-in">
     <h1>ZOO BILLI</h1>
     <p>Зоомагазин в Москве — всё для ваших любимцев</p>
   </header>
-
   <nav>
     <a href="#about">О нас</a>
     <a href="#products">Товары</a>
     <a href="#contact">Контакты</a>
   </nav>
-
   <section id="about" class="about fade-in">
     <h2>О нас</h2>
     <p>ZOO BILLI — уютный магазин для животных в Москве. Мы любим животных и подбираем только качественные товары для ваших любимцев. У нас вы всегда найдёте помощь, советы и широкий выбор продукции.</p>
   </section>
-
   <section id="products" class="products fade-in">
     <h2>Категории товаров</h2>
     <ul>
@@ -109,21 +96,17 @@
       <li>Хомячьи домики, колёса и многое другое</li>
     </ul>
   </section>
-
   <section id="contact" class="contact fade-in">
     <h2>Контакты</h2>
-    <p><strong>Адрес:</strong> </p>
-    <p><strong>Телефон:</strong> </p>
-
+    <p><strong>Адрес:</strong> г. Москва, ул. Лапкина, д. 12</p>
+    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
     <div class="map">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A94cf01d5b9abf0e4b5875f9eac2f221dc442f94401cf9e7037f384189417b62e&amp;source=constructor"
               width="100%" height="300" frameborder="0"></iframe>
     </div>
   </section>
-
   <footer>
     <p>&copy; 2025 ZOO BILLI. Все права защищены.</p>
   </footer>
-
 </body>
 </html>
