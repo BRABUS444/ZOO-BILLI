@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOO BILLI — Зоомагазин</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 10%;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    section {
+      padding: 40px 10%;
+    }
+    .contact, .products, .about {
+      margin-bottom: 40px;
+    }
+    .products ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .products li::before {
+      content: "🐾 ";
+    }
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10%;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 20px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZOO BILLI</h1>
+    <p>Всё для ваших любимцев 🐶🐱🦜</p>
+  </header>
+
+  <section class="contact">
+    <h2>Контакты</h2>
+    <p><strong>Адрес:</strong> г. Москва, ул. Лапкина, д. 12</p>
+    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+  </section>
+
+  <section class="products">
+    <h2>Наш ассортимент</h2>
+    <ul>
+      <li>Корма и лакомства для собак</li>
+      <li>Игрушки и лежанки для кошек</li>
+      <li>Кормушки и аксессуары для попугаев</li>
+      <li>Товары для хомяков и грызунов</li>
+      <li>Гигиенические средства и витамины</li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <h2>О нас</h2>
+    <p>Мы любим животных и стараемся подобрать для них только лучшие товары. В нашем магазине вы найдёте всё необходимое для вашего пушистого или пернатого друга. Приходите — мы рады каждому гостю!</p>
+  </section>
+
+  <section class="images">
+    <img src="https://via.placeholder.com/600x400?text=Наш+магазин+1" alt="Фото магазина 1">
+    <img src="https://via.placeholder.com/600x400?text=Наш+магазин+2" alt="Фото магазина 2">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ZOO BILLI. Все права защищены.</p>
+  </footer>
+</body>
+</html>
