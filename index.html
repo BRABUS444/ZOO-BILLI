@@ -1,107 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZOO BILLI — Зоомагазин</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZOO BILLI — зоомагазин в Москве. Всё для собак, кошек, попугаев и грызунов." />
+  <meta name="keywords" content="зоомагазин, товары для животных, корм для кошек, собак, попугаев, ZOO BILLI" />
+  <meta name="robots" content="index, follow" />
+  <title>ZOO BILLI — Зоомагазин в Москве</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+
     header {
-      background-color: #4CAF50;
+      background: url('https://via.placeholder.com/1600x500?text=ZOO+BILLI') no-repeat center/cover;
       color: white;
-      padding: 20px 10%;
+      padding: 100px 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
+    header h1 { font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
+
+    nav {
+      background-color: #4CAF50;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       padding: 40px 10%;
+      max-width: 1200px;
+      margin: auto;
     }
-    .contact, .products, .about {
+
+    .about, .products, .contact {
       margin-bottom: 40px;
     }
+
     .products ul {
       list-style: none;
       padding-left: 0;
     }
     .products li::before {
       content: "🐾 ";
+      margin-right: 5px;
     }
-    .images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    .map {
       margin-top: 20px;
     }
-    .images img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 10%;
     }
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 20px 5%;
-      }
+      header h1 { font-size: 2rem; }
+      nav { flex-direction: column; gap: 10px; }
+      section { padding: 20px 5%; }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <header class="fade-in">
     <h1>ZOO BILLI</h1>
-    <p>Всё для ваших любимцев 🐶🐱🦜</p>
+    <p>Зоомагазин в Москве — всё для ваших любимцев</p>
   </header>
 
-  <section class="contact">
-    <h2>Контакты</h2>
-    <p><strong>Адрес:</strong> г. Москва, ул. Лапкина, д. 12</p>
-    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#products">Товары</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+
+  <section id="about" class="about fade-in">
+    <h2>О нас</h2>
+    <p>ZOO BILLI — уютный магазин для животных в Москве. Мы любим животных и подбираем только качественные товары для ваших любимцев. У нас вы всегда найдёте помощь, советы и широкий выбор продукции.</p>
   </section>
 
-  <section class="products">
-    <h2>Наш ассортимент</h2>
+  <section id="products" class="products fade-in">
+    <h2>Категории товаров</h2>
     <ul>
       <li>Корма и лакомства для собак</li>
-      <li>Игрушки и лежанки для кошек</li>
-      <li>Кормушки и аксессуары для попугаев</li>
-      <li>Товары для хомяков и грызунов</li>
-      <li>Гигиенические средства и витамины</li>
+      <li>Игрушки, когтеточки и лежанки для кошек</li>
+      <li>Клетки, кормушки и аксессуары для попугаев</li>
+      <li>Хомячьи домики, колёса и многое другое</li>
     </ul>
   </section>
 
-  <section class="about">
-    <h2>О нас</h2>
-    <p>Мы любим животных и стараемся подобрать для них только лучшие товары. В нашем магазине вы найдёте всё необходимое для вашего пушистого или пернатого друга. Приходите — мы рады каждому гостю!</p>
-  </section>
+  <section id="contact" class="contact fade-in">
+    <h2>Контакты</h2>
+    <p><strong>Адрес:</strong> г. Москва, ул. Лапкина, д. 12</p>
+    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
 
-  <section class="images">
-    <img src="https://via.placeholder.com/600x400?text=Наш+магазин+1" alt="Фото магазина 1">
-    <img src="https://via.placeholder.com/600x400?text=Наш+магазин+2" alt="Фото магазина 2">
+    <div class="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A94cf01d5b9abf0e4b5875f9eac2f221dc442f94401cf9e7037f384189417b62e&amp;source=constructor"
+              width="100%" height="300" frameborder="0"></iframe>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 ZOO BILLI. Все права защищены.</p>
   </footer>
+
 </body>
 </html>
