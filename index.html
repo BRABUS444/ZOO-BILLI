@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOO BILLI — Всё для ваших любимцев!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+      background-color: #f8fdf9;
+      background-image: url("background.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.85);
+      min-height: 100vh; overflow: hidden;
+      backdrop-filter: blur(3px);
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 128, 80, 0.9);
+      color: #fff; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: linear-gradient(135deg, #ffffff, #f3f9f4);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      color: #2baf6d;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li::marker {
+      content: '🐾 ';
+    }
+
+    footer {
+      text-align: center;
+      margin: 4rem 0;
+      color: #555;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    footer.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.1rem;
+        padding: 2rem 1rem;
+      }
+      section {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1 style="color:#ffffff; font-weight:800; text-shadow:2px 2px 4px rgba(0,0,0,0.6);">ZOO BILLI — Всё для ваших любимцев!</h1>
+      <p><strong>Адрес:</strong> г. Примерный, ул. Примерная, д. 10</p>
+      <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+    </header>
+
+    <section>
+      <h2>У нас вы найдёте:</h2>
+      <ul>
+        <li>Товары для кошек: корма, игрушки, когтеточки, лежанки</li>
+        <li>Всё для собак: ошейники, лакомства, шампуни, одежда</li>
+        <li>Для попугаев: клетки, корма, игрушки</li>
+        <li>Для хомяков: домики, колёса, кормушки</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Почему выбирают ZOO BILLI?</h2>
+      <ul>
+        <li>Широкий ассортимент товаров</li>
+        <li>Только проверенные бренды</li>
+        <li>Доступные цены</li>
+        <li>Доброжелательные продавцы, которые помогут с выбором</li>
+      </ul>
+    </section>
+
+    <footer>
+      ZOO BILLI — забота начинается здесь. © 2025
+    </footer>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section, footer').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
